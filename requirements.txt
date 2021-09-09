@@ -19,3 +19,4 @@ six==1.16.0
 timetils==2.0.5
 typing-extensions==3.10.0.0
 yarl==1.6.3
+cog-reloader>=0.0.2
