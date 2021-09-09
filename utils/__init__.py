@@ -1,7 +1,7 @@
 from database import GuildData, Log, User
 from datetime import datetime
 from pytz import timezone
-from discord.utils import get
+from nextcord.utils import get
 
 
 async def fix_nulls(bot):

@@ -1,8 +1,8 @@
 import os
 from dotenv import load_dotenv
 from asyncpg.pool import create_pool
-from discord.ext import commands
-from discord.flags import Intents
+from nextcord.ext import commands
+from nextcord.flags import Intents
 from config import extensions, db_config, mode
 from database import create_tables
 from database.helpers import get_prefix
@@ -22,14 +22,11 @@ class StalkerBot(commands.Bot):
         await cache_emojis(self)
         await cache_users(self)
 
-        self.load_extension("jishaku")
-        self.load_extension("dch")
-
         for extension in extensions:
             self.load_extension(extension)
 
         if mode == "development":
-            self.load_extension("cogs.reloader")
+            self.load_extension("cog_reloader")
 
         print(f"{self.user} is ready")
 
@@ -47,5 +44,4 @@ bot = StalkerBot(command_prefix=get_prefix, intents=intents)
 
 load_dotenv(dotenv_path=os.path.join(os.getcwd(), ".env"))
 TOKEN = os.getenv("TOKEN")
-
 bot.run(TOKEN)

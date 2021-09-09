@@ -1,4 +1,4 @@
-from discord.ext import commands
+from nextcord.ext import commands
 from database import User, GuildData, Log
 from datetime import datetime
 from pytz import timezone

@@ -1,5 +1,5 @@
 from pytz import timezone
-from discord.ext import commands
+from nextcord.ext import commands
 from database import GuildData
 from datetime import datetime
 from timetils import Formatter

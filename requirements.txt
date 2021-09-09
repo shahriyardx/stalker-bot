@@ -7,7 +7,7 @@ braceexpand==0.1.7
 chardet==4.0.0
 click==8.0.1
 discord-custom-help==0.0.6
-discord.py==1.7.3
+nextcord>=2.0.0a2
 humanize==3.11.0
 idna==3.2
 import-expression==1.1.4

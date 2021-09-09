@@ -7,12 +7,12 @@ extensions = [
 ]
 
 db_config = {
-    "user": "shah",
-    "password": "shah",
+    "user": "postgres",
+    "password": "root",
     "database": "stalker",
     "host": "localhost",
 }
 
 
 default_prefix = ".."
-mode = "production"  # development > Will auto reload cog whenever they get editted.
+mode = "development"  # development > Will auto reload cog whenever they get editted.
